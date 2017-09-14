@@ -11,3 +11,11 @@
 .links-section a:hover {
     text-decoration: underline;
 }
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}

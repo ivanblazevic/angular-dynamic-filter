@@ -12,7 +12,7 @@ angular.module('angularJsApp')
 
     $scope.onFilter = function(result) {
         $scope.result = result;
-    }
+    };
 
     $scope.dataSource = [
         {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -42,10 +42,10 @@ angular.module('angularJsApp')
         var results = query ? $scope.dataSource.filter( createFilterFor(query) ) : $scope.dataSource, deferred;
         deferred = $q.defer();
         $timeout(function () {
-            deferred.resolve( results.map(function(m) { return m.name }) );
+            deferred.resolve( results.map(function(m) { return m.name; }) );
         }, Math.random() * 1000, false);
         return deferred.promise;
-    }
+    };
 
     /**
     * Create filter function for a query string
@@ -55,7 +55,7 @@ angular.module('angularJsApp')
         return function filterFn(item) {
             return (item.name.toLowerCase().indexOf(lowercaseQuery) === 0);
         };
-    }
+    };
 
     $scope.filterOptions = [
         {
@@ -75,11 +75,11 @@ angular.module('angularJsApp')
             field: "name",
             querySearch: $scope.querySearch
         }
-    ]
+    ];
 
     $scope.filterConfig = {
         saveState: true
-    }
+    };
 
 });
 
