@@ -1,17 +1,17 @@
 {
-  "name": "dynamic-filter",
-  "description": "Dynamic filter",
-  "main": "./dest/dynamicFilter.js",
+  "name": "angular-dynamic-filter",
+  "homepage": "https://github.com/ivanblazevic/angular-dynamic-filter",
   "authors": [
-    "Ivan Blažević"
+    "Blazh <iblazevi@gmail.com>"
   ],
-  "license": "MIT",
+  "description": "Angular dynamic filtering directive",
+  "main": "./ngDynamicFilter.js",
   "keywords": [
     "angular",
     "dynamic",
     "filter"
   ],
-  "homepage": "https://github.com/ivanblazevic/dynamic-filter",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,0 +1,33 @@
+{
+  "name": "dynamic-filter",
+  "description": "Dynamic filter",
+  "main": "./dest/dynamicFilter.js",
+  "authors": [
+    "Ivan Blažević"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "dynamic",
+    "filter"
+  ],
+  "homepage": "https://github.com/ivanblazevic/dynamic-filter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "1.0.2",
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.2",
+    "commit": "8b08002a7d25eab3e0fa08b9d0e1350db7179708"
+  },
+  "_source": "https://github.com/ivanblazevic/dynamic-filter.git",
+  "_target": "^1.0.2",
+  "_originalSource": "dynamic-filter",
+  "_direct": true
+}
