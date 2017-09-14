@@ -1,5 +1,7 @@
 ## Installation
 
+### LIVE EXAMPLE: [Dynamic Filter with Angular Material](https://ivanblazevic.github.io/angular-dynamic-filter/)
+
  bower install ng-dynamic-filter
 
  > Bower will automatically install dynamic-filter dependency, if you are not using dependency management include dynamic-filter library manually:
