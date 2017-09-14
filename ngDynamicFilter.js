@@ -21,7 +21,7 @@ angular.module('ngDynamicFilter', []).directive('dynamicFilter', function() {
             if ($scope.config && $scope.config.saveState) {
                 $scope.filters.loadState();
             }
-
+            
         }
    }
 });
