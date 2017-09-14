@@ -32,6 +32,7 @@ module.exports = function(config) {
       'bower_components/angular-material/angular-material.js',
       'bower_components/dynamic-filter/dest/dynamicFilter.js',
       'bower_components/ng-dynamic-filter/ngDynamicFilter.js',
+      'bower_components/material-design-lite/material.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
