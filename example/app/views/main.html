@@ -33,13 +33,23 @@
     <dynamic-filter
         template-url="views/dynamicFilter/ngDynamicFilterMaterial.html"
         config="filterConfig"
-        options="filterOptions"
-        on-select="onFilter(result)">
+        options="filterOptions">
     </dynamic-filter>
+
+    <p><b>Configuration:</b></p>
+
+    <div>
+        <md-checkbox ng-model="filterConfig.saveState" aria-label="Checkbox 1" ng-change="onFilterConfigChange()">
+            Save Filter State <i>(filter keeps selection after page reload)</i>
+        </md-checkbox>
+        <md-checkbox ng-model="filterConfig.autoApply" aria-label="Checkbox 1" ng-change="onFilterConfigChange()">
+            Auto-apply <i>(callback is executed automatically on each filter change)</i>
+        </md-checkbox>
+    </div>
 
     <pre style="border: 1px solid #e4e4e4;" class="prettyprint">JSON output: {{ result }}</pre>
 
-    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width:100%">
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:100%">
         <thead>
             <tr>
                 <th width="20">Position</th>

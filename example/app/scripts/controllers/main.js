@@ -77,9 +77,13 @@ angular.module('angularJsApp')
         }
     ];
 
-    $scope.filterConfig = {
-        saveState: true
-    };
+    $scope.onFilterConfigChange = function() {
+        localStorage.setItem('filterConfig', JSON.stringify($scope.filterConfig));
+    }
+
+    $scope.filterConfig = JSON.parse(localStorage.getItem('filterConfig'));
+    if (!$scope.filterConfig) $scope.filterConfig = {};
+    $scope.filterConfig.callback = $scope.onFilter;
 
 });
 
@@ -97,7 +101,7 @@ angular.module('angularJsApp').filter('search', function() {
             function hasMatch(o) {
                 var field = Object.keys(o)[0];
                 if (!o[field][0]) return false;
-                if (!item[field]) return false;
+                if (!item[field] || item[field] == "") return false;
                 return o[field].some(function(s) {
                     return !!(item[field].toString().toLowerCase().indexOf(s.toLowerCase() || '') !== -1);
                 })
