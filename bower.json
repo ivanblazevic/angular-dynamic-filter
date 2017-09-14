@@ -1,5 +1,5 @@
 {
-  "name": "angular-dynamic-filter",
+  "name": "ng-dynamic-filter",
   "homepage": "https://github.com/ivanblazevic/angular-dynamic-filter",
   "authors": [
     "Blazh <iblazevi@gmail.com>"
@@ -18,5 +18,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "dynamic-filter": "^1.0.2"
+  }
 }
