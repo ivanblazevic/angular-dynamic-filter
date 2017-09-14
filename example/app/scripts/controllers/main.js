@@ -8,7 +8,7 @@
 * Controller of the angularJsApp
 */
 angular.module('angularJsApp')
-.controller('MainCtrl', function ($scope) {
+.controller('MainCtrl', function ($scope, $q, $timeout) {
 
     $scope.onFilter = function(result) {
         $scope.result = result;
