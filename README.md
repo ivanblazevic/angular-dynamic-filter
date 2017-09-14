@@ -1,12 +1,14 @@
-## Installation
-
 ### LIVE EXAMPLE: [Dynamic Filter with Angular Material](https://ivanblazevic.github.io/angular-dynamic-filter/)
+
+## Installation
 
  bower install ng-dynamic-filter
 
  > Bower will automatically install dynamic-filter dependency, if you are not using dependency management include dynamic-filter library manually:
 
  https://github.com/ivanblazevic/dynamic-filter/blob/master/dest/dynamicFilter.js
+
+> IMPORTANT: if you are using minifer, you may want to exclude dynamic-filter library since it is complied to ES6 (many minifiers do not support ES6 yet)
 
 
  * add 'ngDynamicFilter' module
