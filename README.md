@@ -11,20 +11,19 @@ Filter homepage: https://github.com/ivanblazevic/dynamic-filter
 Source: https://github.com/ivanblazevic/dynamic-filter/blob/master/dest/
 
  * add 'ngDynamicFilter' module
- * add directive:
+ * add directive templte:
 
 ```
 <dynamic-filter
     template-url="app/directives/dynamicFilter/ngDynamicFilterMaterial.html"
     config="filterConfig"
-    options="filterOptions"
-    on-select="onFilter(result)">
+    options="filterOptions">
 </dynamic-filter>
 ```
 
 * onFilter - is callback function from controller
 * options - array of option objects, check API docs: https://github.com/ivanblazevic/dynamic-filter/#api
 * config - config object, check API docs: https://github.com/ivanblazevic/dynamic-filter/#api
-* template-url - manually copy directive's template from template folder to desired location and point out
+* template-url - manually copy directive's template from template folder to desired location and point to correct location in template-url attribute
 
-For more details check out example directory
+For more details check out example directory source

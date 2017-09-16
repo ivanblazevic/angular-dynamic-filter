@@ -1,0 +1,29 @@
+{
+  "name": "angular-dynamic-filter",
+  "version": "1.0.4",
+  "description": "angularJS directive implementation of dynamic filter library",
+  "main": "ngDynamicFilter.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-web": "git subtree push --prefix example/dist origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanblazevic/angular-dynamic-filter.git"
+  },
+  "keywords": [
+    "dynamic",
+    "filter",
+    "angular",
+    "directive"
+  ],
+  "author": "Ivan Blažević",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanblazevic/angular-dynamic-filter/issues"
+  },
+  "homepage": "https://github.com/ivanblazevic/angular-dynamic-filter#readme"
+}
