@@ -19,15 +19,14 @@
     "test",
     "tests"
   ],
-  "version": "1.0.2",
-  "_release": "1.0.2",
+  "version": "1.0.4",
+  "_release": "1.0.4",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.2",
-    "commit": "8b08002a7d25eab3e0fa08b9d0e1350db7179708"
+    "tag": "1.0.4",
+    "commit": "891773574121e8a328f0b0c88cb862bb81398a23"
   },
   "_source": "https://github.com/ivanblazevic/dynamic-filter.git",
   "_target": "^1.0.2",
-  "_originalSource": "dynamic-filter",
-  "_direct": true
+  "_originalSource": "dynamic-filter"
 }

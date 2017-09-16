@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+    grunt.config.set("singleRun", false);
+
     // Project configuration.
     grunt.initConfig({
 
@@ -10,37 +12,6 @@ module.exports = function(grunt) {
             concat: ['dest/*.ts']
         },
 
-        ts_concat: {
-            default: {
-                dest: 'dest/concat.ts',
-                src: 'src/*.ts'
-            }
-        },
-
-        ts: {
-            default : {
-                src: "dest/concat.ts",
-                options: {
-                    sourceMap: true,
-                    declaration: false,
-                    module: 'commonjs',
-                    target: 'es6',
-                    types: [
-                        "angular"
-                    ],
-                }
-            }
-        },
-
-        rename: {
-            main: {
-                files: [
-                    { src: ['dest/concat.js'], dest: 'dest/ngDynamicFilter.js' },
-                    { src: ['dest/concat.js.map'], dest: 'dest/ngDynamicFilter.js.map' }
-                ]
-            }
-        },
-
         uglify: {
             default: {
                 files: {
@@ -49,10 +20,22 @@ module.exports = function(grunt) {
             }
         },
 
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['env']
+            },
+            dist: {
+                files: {
+                    'dest/dynamicFilter.js': 'dest/dynamicFilter.js'
+                }
+            }
+        },
+
         browserify: {
             dist: {
                 files: {
-                    'dest/dynamicFilter.js': ['src/*.ts']
+                    'dest/dynamicFilter.js': ['src/*.ts','!src/*.spec.ts']
                 },
                 options: {
                     plugin: ['tsify'],
@@ -63,13 +46,38 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+
+        karma: {
+            options: {
+                configFile: 'karma.conf.js'
+            },
+
+            continuous: {
+                logLevel:  'INFO',
+                singleRun: grunt.option('travis') == true ? true : false,
+            }
+        },
+
+        coveralls: {
+            options: {
+                debug: true,
+                coverageDir: 'coverage/',
+                dryRun: false,
+                force: true,
+                recursive: true
+            }
         }
 
     });
 
-    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-karma-coveralls');
 
-    grunt.loadNpmTasks('grunt-contrib-rename');
+    grunt.loadNpmTasks('grunt-karma');
+
+    grunt.loadNpmTasks('grunt-babel');
+
+    grunt.loadNpmTasks('grunt-browserify');
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
@@ -77,9 +85,9 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks("grunt-ts");
 
-    grunt.loadNpmTasks('grunt-ts-concat');
-
     // Default task(s)
-    grunt.registerTask('default', ['clean', 'browserify'/*, 'uglify'*/]);
+    grunt.registerTask('default', ['clean', 'browserify', 'babel', 'uglify']);
+
+    grunt.registerTask('test', ['karma', 'coveralls']);
 
 };
