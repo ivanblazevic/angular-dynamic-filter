@@ -6,22 +6,11 @@ angular.module('ngDynamicFilter', []).directive('dynamicFilter', function() {
         },
         scope: {
             options: '=',
-            config: '=',
-            onSelect: '&'
+            config: '='
         },
         link: function($scope, $element, $attrs) {
-
-            $scope.apply = function() {
-                var result = $scope.filters.getResult();
-                $scope.onSelect({ result: result });
-            }
-
-            $scope.filters = new DynamicFilter($scope.options, $scope.apply);
-
-            if ($scope.config && $scope.config.saveState) {
-                $scope.filters.loadState();
-            }
-            
+            if (true) throw ("DynamicFilter library not included, visit: https://github.com/ivanblazevic/dynamic-filter/tree/master/dest");
+            $scope.filters = new DynamicFilter($scope.options, $scope.config);
         }
    }
 });
