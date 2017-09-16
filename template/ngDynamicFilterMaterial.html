@@ -12,8 +12,8 @@
 
             <md-input-container style="width: 100%;" ng-if="!filter.isAutocomplete()">
 
-                <md-select ng-model="filter.values[$index]" ng-change="filter.callback()" placeholder="Select value" ng-if="filter.isOptions()">
-                    <md-option ng-hide="filters.isValueSelected(o)" ng-value="o" ng-repeat="o in filter.option.options">{{ o }}</md-option>
+                <md-select ng-model="filter.values[$index]" ng-change="filter.ref.callback()" placeholder="Select value" ng-if="filter.isOptions()">
+                    <md-option ng-hide="filter.isValueSelected(o)" ng-value="o" ng-repeat="o in filter.option.options">{{ o }}</md-option>
                 </md-select>
 
                 <input type="text"
@@ -52,6 +52,7 @@
     <md-input-container style="margin: 0 0 20px 0;">
         <md-button ng-click="filters.add()" class="md-raised md-primary">Add Filter</md-button>
         <md-button ng-click="filters.removeLast()" class="md-raised">Remove Filter</md-button>
+        <md-button ng-show="!config.autoApply && filters.isApplyEnabled()" ng-click="filters.callback(true)" class="md-raised">Apply</md-button>
     </md-input-container>
 
 </div>

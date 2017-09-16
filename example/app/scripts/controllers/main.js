@@ -95,7 +95,7 @@ angular.module('angularJsApp')
  */
 angular.module('angularJsApp').filter('search', function() {
     return function(list, dynamicFilterResult) {
-        if (!dynamicFilterResult || dynamicFilterResult.length == 0) return list;
+        if (!dynamicFilterResult) return list;
 
         return list.filter(function(item) {
             function hasMatch(o) {
