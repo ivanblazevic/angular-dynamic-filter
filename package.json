@@ -1,7 +1,7 @@
 {
   "name": "angular-dynamic-filter",
   "version": "1.0.4",
-  "description": "angularJS directive implementation of dynamic filter library",
+  "description": "angularJS directive implementation of DynamicFilter library",
   "main": "ngDynamicFilter.js",
   "directories": {
     "example": "example"
@@ -15,10 +15,17 @@
     "url": "git+https://github.com/ivanblazevic/angular-dynamic-filter.git"
   },
   "keywords": [
+    "angular",
     "dynamic",
     "filter",
+    "dynamic",
+    "typeahead",
+    "autocomplete",
+    "dropdown",
+    "selection",
     "angular",
-    "directive"
+    "search",
+    "json"
   ],
   "author": "Ivan Blažević",
   "license": "MIT",
