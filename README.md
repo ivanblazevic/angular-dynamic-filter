@@ -1,3 +1,5 @@
+[![Bower version](https://badge.fury.io/bo/ng-dynamic-filter.svg)](https://badge.fury.io/bo/ng-dynamic-filter)
+
 ### LIVE EXAMPLE: [Dynamic Filter with Angular Material](https://ivanblazevic.github.io/angular-dynamic-filter/)
 
 ## Installation
