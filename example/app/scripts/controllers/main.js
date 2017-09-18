@@ -96,7 +96,6 @@ angular.module('angularJsApp')
 angular.module('angularJsApp').filter('search', function() {
     return function(list, dynamicFilterResult) {
         if (!dynamicFilterResult) return list;
-
         return list.filter(function(item) {
             function hasMatch(o) {
                 var field = Object.keys(o)[0];
@@ -106,7 +105,7 @@ angular.module('angularJsApp').filter('search', function() {
                     return !!(item[field].toString().toLowerCase().indexOf(s.toLowerCase() || '') !== -1);
                 })
             }
-            return dynamicFilterResult.some(hasMatch);
+            return hasMatch(dynamicFilterResult);
         });
     }
 });

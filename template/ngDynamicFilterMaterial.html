@@ -12,7 +12,7 @@
 
             <md-input-container style="width: 100%;" ng-if="!filter.isAutocomplete()">
 
-                <md-select ng-model="filter.values[$index]" ng-change="filter.ref.callback()" placeholder="Select value" ng-if="filter.isOptions()">
+                <md-select ng-model="filter.values[$index]" ng-change="filter.callback()" placeholder="Select value" ng-if="filter.isOptions()">
                     <md-option ng-hide="filter.isValueSelected(o)" ng-value="o" ng-repeat="o in filter.option.options">{{ o }}</md-option>
                 </md-select>
 
